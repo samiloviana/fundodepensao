@@ -26,15 +26,18 @@
 /* Inicio do Cabeçalho  */
 
 header {
-    background-color: rgb(14, 14, 48);
+    background-color: var(--cor-primaria);
     color: white;
     text-align: center;
+    padding: 15px;
 }
 
 
 nav {
-    padding: 5px;
-    text-align: left;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 10px 5px;
 }
 
 
@@ -57,6 +60,24 @@ nav a:hover {
 }
 
 
+@media (max-width: 600px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav > a { 
+        display: block;
+        padding: 12px;
+        font-size: 1.1em;
+
+    }
+}
+
+
 /* Fim dO Cabeçalho */
 
 
@@ -70,8 +91,9 @@ body {
 
 main {
     background-color: white;
-    width: 800px;
-    margin: 70px auto;
+    width: 90%;
+    max-width: 800px;
+    margin: 90px auto 40px auto;
     border-radius: 6px;
 }
 
@@ -109,5 +131,92 @@ article p {
     max-width: 800px;
     margin: auto;
     margin-bottom: 40px;
+    border-radius: 5px;
 }
 
+.link-para-mais a {
+
+color: var(--cor-destaque);
+
+}
+
+@media (max-width: 600px) {
+    article {
+        font-size: 16px;
+        padding: 20px;
+        line-height: 1.7;
+    }
+}
+
+
+/*Apenas conteúdo do artigo*/
+
+
+
+/*CSS para pagina de lista dos primeiros 100 artigos*/
+
+
+#cabeçalho-100-artigos {
+    background-color: #00B3B3;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.lista-100-primeiros-artigos {
+    text-align: center;
+    margin: 50px;
+    padding: 20PX;
+}
+
+.lista-100-primeiros-artigos li {
+    background-color: var(--cor-neutra-suave);
+    margin: 10px;
+    padding: 10pX;
+    border-radius: 6px;
+    text-align: left;
+}
+
+
+.lista-100-primeiros-artigos a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+
+.lista-100-primeiros-artigos a:hover {
+
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+
+
+/*CSS para pagina de lista dos primeiros 100 artigos*/
+
+
+
+/*Linhas de estilos*/
+
+
+
+.divisor-estilo {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #E0E0E0;
+    margin: 20px 0px 30px 0px;
+}
+
+
+.divisor-estilo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 50px;
+    height: 8px;
+    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+}
