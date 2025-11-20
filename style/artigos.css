@@ -78,6 +78,7 @@ main {
 
 
 article {
+    text-align: justify;
     font-size: 18px;
     padding: 40px;
     line-height: 1.6;
@@ -89,10 +90,24 @@ article h1 {
     line-height: 1.5;
 }
 
+
+article h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
 article p {
     margin-bottom: 20px;
 }
 
 
-
+.link-para-mais {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+}
 
