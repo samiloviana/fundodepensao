@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+
+:root {
+    --cor-primaria: #0A0A23; /*Azul Marinho profundo*/
+    --cor-secundaria: #00FFFF; /*Ciano*/
+    --cor-neutra-suave: #F7F7F7; /*Para fundo das paginas e artigos*/
+    --cor-neutra-escura: #1A1A1A; /*Para textos fortes, títulos, rodapé escuro.*/
+    --cor-destaque: #00B3B3; 
+    --fonte-principal: 'Inter', Arial, sans-serif;
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +23,12 @@
 
 
 
-
+/* Inicio do Cabeçalho  */
 
 header {
     background-color: rgb(14, 14, 48);
     color: white;
     text-align: center;
-    padding: 10px;
 }
 
 
@@ -44,30 +57,42 @@ nav a:hover {
 }
 
 
+/* Fim dO Cabeçalho */
 
-main 
 
-{
-font-family: Arial, Helvetica, sans-serif;
-font-size: 1em;
-color: black;
-padding: 15px;
-margin-top: 100px;
-margin-left: 100px;
-margin-right: 100px;
-
+body {
+    font-family: var(--fonte-principal) ;
+    background-color: var(--cor-neutra-suave);
 }
 
-Li {
+/*inicio do conteúdo*/
 
-    margin: 20px;
-    padding: 20px;
+
+main {
+    background-color: white;
+    width: 800px;
+    margin: 70px auto;
+    border-radius: 6px;
 }
 
 
 
-li > a {
-
-    text-decoration: none;
-
+article {
+    font-size: 18px;
+    padding: 40px;
+    line-height: 1.6;
 }
+
+article h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+article p {
+    margin-bottom: 20px;
+}
+
+
+
+

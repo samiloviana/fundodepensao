@@ -15,7 +15,6 @@ header {
     background-color: rgb(14, 14, 48);
     color: white;
     text-align: center;
-    padding: 10px;
 }
 
 
@@ -79,8 +78,6 @@ article {
     max-width: 800px;
     border-radius: 10px;
 }
-
-
 
 
 
