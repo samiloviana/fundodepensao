@@ -220,3 +220,13 @@ color: var(--cor-destaque);
     background-color: var(--cor-secundaria);
     border-radius: 5px;
 }
+
+
+
+.imagem-ciclo-cartao-credito img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    max-height: 900px;
+    border-radius: 6px;
+}
