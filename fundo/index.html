@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intependência Financeira | Construa seu fundo de pensão</title>
+    <link rel="stylesheet" href="/style/artigos.css">
+</head>
+<body>
+      <header>
+    <h1>Fundo de Pensão</h1>
+    <nav>
+      <a href="/">Pagina Inicial</a>
+      <a href="/artigos/">Artigos</a>
+      <a href="/sobre">Sobre o Site</a>
+      <a href="/fundo/">Fundo</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Calculadora de Independência Financeira</h1>
+    <h2>Construa sua renda para o futuro</h2>
+
+    <input type="number" id="idadeAtual" placeholder="Idade atual">
+<input type="number" id="idadeAlvo" placeholder="Idade desejada">
+<input type="number" id="patrimonio" placeholder="Patrimônio atual">
+<input type="number" id="aporte" placeholder="Aporte mensal">
+<input type="number" id="rentabilidade" placeholder="Rentabilidade anual (%)">
+<input type="number" id="rendaDesejada" placeholder="Renda mensal desejada">
+
+<button id="calcular">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+document.getElementById("calcular").addEventListener("click", function() {
+
+  let idadeAtual = Number(document.getElementById("idadeAtual").value);
+  let idadeAlvo = Number(document.getElementById("idadeAlvo").value);
+  let patrimonio = Number(document.getElementById("patrimonio").value);
+  let aporteMensal = Number(document.getElementById("aporte").value);
+  let rentabilidade = Number(document.getElementById("rentabilidade").value) / 100;
+  let rendaDesejada = Number(document.getElementById("rendaDesejada").value);
+
+  let patrimonioNecessario = (rendaDesejada * 12) / 0.04;
+  let anos = idadeAlvo - idadeAtual;
+
+  for (let i = 0; i < anos; i++) {
+    patrimonio = (patrimonio + (aporteMensal * 12)) * (1 + rentabilidade);
+  }
+
+  if (patrimonio >= patrimonioNecessario) {
+    document.getElementById("resultado").innerText =
+      "Parabéns! Você atinge a independência financeira.";
+  } else {
+    document.getElementById("resultado").innerText =
+      "Com esse plano, você ainda não atinge a independência financeira.";
+  }
+});
+</script>
+
+
+</main>
+</body>
+</html>
