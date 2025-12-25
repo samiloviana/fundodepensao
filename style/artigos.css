@@ -232,3 +232,38 @@ color: var(--cor-destaque);
 }
 
 
+
+/*Style ferramentas*/
+
+
+.botao-fundo {
+
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 4px;
+
+
+}
+
+.botao-fundo a {
+
+text-align: center;
+margin: auto;
+font-size: 16px;
+text-decoration: none;
+color: var(--cor-neutra-escura);
+
+
+}
+
+
+.botao-fundo a:hover {
+
+text-align: center;
+margin: auto;
+font-size: 16px;
+text-decoration: none;
+color: var(--cor-neutra-escura);
+
+
+}
